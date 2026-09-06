@@ -61,3 +61,10 @@ spec:
             periodSeconds: 20
             timeoutSeconds: 3
             failureThreshold: 3
+
+          # Inject environment variables from external ConfigMaps and Secrets:
+          envFrom:
+            - configMapRef:
+                name: frontend-config # Injects non-sensitive configs (e.g., API_URL, PORT)
+            - secretRef:
+                name: frontend-secrets # Injects sensitive credentials (e.g., API_KEY, DB_PASS)
