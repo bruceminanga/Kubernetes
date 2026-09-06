@@ -1,0 +1,28 @@
+# --- Cluster Credentials & Accidental Dumps ---
+# Never let a live cluster config or token reach Git
+kubeconfig*
+*.kubeconfig
+*.token
+
+# --- Certificates & Private Keys ---
+# Often generated locally when testing TLS/Ingress
+*.key
+*.pem
+*.crt
+*.cert
+
+# --- Local Overrides & Raw Secrets ---
+# Keeps local test manifests and unencrypted secret files out
+*secret*.yaml
+*secrets*.yaml
+local-*.yaml
+*.local.yaml
+.env
+.env.*
+
+# --- OS & Editor Cruft ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
