@@ -1,4 +1,4 @@
-# Reusable Kubernetes Manifests
+# Reusable Kubernetes Manifests for personal lab projects
 
 > A collection of modular, production-grade Kubernetes base templates and overlays for standard application deployments.
 
