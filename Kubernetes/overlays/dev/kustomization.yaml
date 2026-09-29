@@ -14,8 +14,8 @@ labels:
       environment: dev
     includeTemplates: true
 
-# Root level — aligned all the way to the left:
-images:
-  - name: frontend-app
-    newName: my-registry.com/my-prod-app
-    newTag: v1.4.2
+# insert your own image value
+# images:
+#   - name: frontend-app
+#     newName: my-registry.com/my-prod-app
+#     newTag: v1.4.2
