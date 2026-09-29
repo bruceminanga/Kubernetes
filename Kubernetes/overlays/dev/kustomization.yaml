@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: frontend-dev
+namePrefix: dev-
+
+resources:
+  - ../../base/
+  - namespace.yaml
+
+labels:
+  - pairs:
+      app.kubernetes.io/instance: frontend-dev
+      environment: dev
+    includeTemplates: true
+
+# Root level — aligned all the way to the left:
+images:
+  - name: frontend-app
+    newName: my-registry.com/my-prod-app
+    newTag: v1.4.2
